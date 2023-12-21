@@ -9,11 +9,35 @@ based upon the following grammar (in BNF):
 
 
 P ::= S
+
+
+
 S ::= V=E | read(V) | write(V) | do { S } while (C) | S;S
+
+
+
 C ::= E < E | E > E | E == E | E != E | E <= E | E >= E
+
+
+
 E ::= T | E + T | E - T
+
+
+
 T ::= F | T * F | T / F
+
+
+
 F ::= (E) | O | N | V
+
+
+
 O ::= V++ | V--
+
+
+
 V ::= a | b | … | y | z | aV | bV | … | yV | zV
+
+
+
 N ::= 0 | 1 | … | 8 | 9 | 0N | 1N | … | 8N | 9N
